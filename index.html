@@ -1,5 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
   <title>Mobuli</title>
   <base href="/mobuli/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +9,20 @@
 <link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
 <body>
   <!-- <app-root></app-root> -->
-  hey
+  <span id="target">wenny0073</span>
+  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">Click to copy!</button>
+
 <script src="runtime.780e9a58553452b8.js" type="module"></script><script src="polyfills.08dcc9b9700897ad.js" type="module"></script><script src="main.6b995eed995a13f2.js" type="module"></script>
+<script>
+  $(document).ready(function(){
+    var clipboard=new Clipboard('#copy_btn');
+    clipboard.on('success',function(e){
+      alert("Copy success!!!",1500);
+      window.location.href='weixin://';
+      e.clearSelection();
+      console.log(e.clearSelection);
+    });
+  });
+</script>
 
 </body></html>
