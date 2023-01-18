@@ -16,7 +16,7 @@
   $(document).ready(function(){
     var clipboard=new Clipboard('#copy_btn');
     clipboard.on('success',function(e){
-      alert("複製成功在微信上搜索處黏貼即可!!!",1500);
+      alert("複製成功 打開微信搜索處黏貼即可!!!",1500);
       window.location.href='weixin://';
       e.clearSelection();
       console.log(e.clearSelection);
