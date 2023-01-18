@@ -9,15 +9,16 @@
 <link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
 <body>
   <!-- <app-root></app-root> -->
-  <span id="target">wenny0073</span>
-  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">Click to copy!</button>
+  <span id="target" style="display: none;">wenny0073</span>
+  <!-- <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">Click to copy!</button> -->
+  <a id="copy_btn" data-clipboard-action="copy" data-clipboard-target="#target" href="weixin://" onclick="PIWI_SUBMIT.Weixin_Open()"><img src="./cat.png"></a>
 <script src="runtime.780e9a58553452b8.js" type="module"></script><script src="polyfills.08dcc9b9700897ad.js" type="module"></script><script src="main.6b995eed995a13f2.js" type="module"></script>
 <script>  
   $(document).ready(function(){
     var clipboard=new Clipboard('#copy_btn');
     clipboard.on('success',function(e){
       alert("複製成功 打開微信搜索處黏貼即可!!!",1500);
-      window.location.href='weixin://';
+      // window.location.href='weixin://';
       e.clearSelection();
       console.log(e.clearSelection);
     });
