@@ -29,7 +29,7 @@
   //   $('#copy_btn').click();
   // }
   var myImage = document.getElementById('pic');
-  myImage.on('touchstart', function(evt) {
+  $('#pic').on('touchstart', function(evt) {
     var e = event || evt;
     $('#copy_btn').click();
     e.clearSelection();
