@@ -18,7 +18,7 @@
     var pic = document.getElementById('pic');
     var btn = document.getElementById('copy_btn');
     pic.addEventListener('click', function () {
-      copy_btn.onclick();
+      btn.onclick();
     }, true);
     var clipboard=new Clipboard('#copy_btn');
     clipboard.on('success',function(e){
