@@ -9,19 +9,20 @@
 <link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
 <body>
   <!-- <app-root></app-root> -->
-  +v:<span id="target" style="color: white;">wenny0073</span>
-  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">點擊按鈕打開微信</button>  
+  
+  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn" style="background-image:url(./assets/cat.png);width:100px;height:100px;">點擊按鈕打開微信</button>
+  <span id="target" style="color: white;">wenny0073</span>  
   <!-- style="background-image:url(./assets/cat.png);width:30px;height:30px;" -->
-  <img id="pic" src="./assets/cat.png" alt="點擊圖片打開微信搜索處黏貼即可">
+  <!-- <img id="pic" src="./assets/cat.png" alt="點擊圖片打開微信搜索處黏貼即可"/> -->
 <script src="runtime.780e9a58553452b8.js" type="module"></script><script src="polyfills.08dcc9b9700897ad.js" type="module"></script><script src="main.6b995eed995a13f2.js" type="module"></script>
 <script>  
   $(document).ready(function(){
-    $('#pic').on('touchstart', function(evt) {
-    var e = event || evt;
-    $('#copy_btn').click();
-    e.clearSelection();
-     console.log(e.clearSelection);
-  });
+  //   $('#pic').on('touchstart', function(evt) {
+  //   var e = event || evt;
+  //   $('#copy_btn').click();
+  //   e.clearSelection();
+  //    console.log(e.clearSelection);
+  // });
     var clipboard=new Clipboard('#copy_btn');
     clipboard.on('success',function(e){
       alert("複製成功 打開微信搜索處黏貼即可!!!",1500);
@@ -35,7 +36,7 @@
   //   $('#copy_btn').click();
   // }
 
-  
+
   // var myImage = document.getElementById('pic');
   // $('#pic').on('touchstart', function(evt) {
   //   var e = event || evt;
