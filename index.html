@@ -10,12 +10,16 @@
 <body>
   <!-- <app-root></app-root> -->
   <span id="target" style="display: none;">wenny0073</span>
-  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn"><img src="./assets/cat.png" alt="點擊圖片打開微信搜索處黏貼即可"></button>
-  <!-- <img src="./assets/cat.png" alt="點擊圖片打開微信搜索處黏貼即可"/> -->
+  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn"></button>
+  <img id="pic" src="./assets/cat.png" alt="點擊圖片打開微信搜索處黏貼即可">
 <script src="runtime.780e9a58553452b8.js" type="module"></script><script src="polyfills.08dcc9b9700897ad.js" type="module"></script><script src="main.6b995eed995a13f2.js" type="module"></script>
 <script>  
   $(document).ready(function(){
-
+    var pic = document.getElementById('pic');
+    var btn = document.getElementById('copy_btn');
+    pic.addEventListener('click', function () {
+      copy_btn.onclick();
+    }, true);
     var clipboard=new Clipboard('#copy_btn');
     clipboard.on('success',function(e){
       alert("複製成功 打開微信搜索處黏貼即可!!!",1500);
